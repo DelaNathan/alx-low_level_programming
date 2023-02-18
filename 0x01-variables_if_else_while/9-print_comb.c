@@ -1,23 +1,22 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
- * Return: Always 0 (Success)
+ * Description: print combination of the numbers 0-9
+ * Return: 0 (success)
  */
 int main(void)
 {
-	int i;
+	int num;
 
-	for (i = 0; i < 10; i++)
+	for (num = 48; num <= 57; num++)
 	{
-	putchar(i + '0');
-	if (i != 9)
-	{
-		putchar(',');
-		putchar(' ');
+		putchar((char)num);
+		if (num != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
-}
-
 	putchar('\n');
 	return (0);
 }
