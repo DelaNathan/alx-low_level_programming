@@ -1,47 +1,49 @@
 #include "main.h"
 
 /**
- * print_times_table - print a times table for a given number n
- * @n: the maximum number
- *
+ * print_times_table - Print the `n` times table, starting with 0.
+ * Description: If `n` is greater than 15 or less than 0, print nothing.
+ * @n: int type number
  */
 void print_times_table(int n)
 {
-	int i, j, product;
+	int x = 0, y, z;
 
-	if (n >= 0 && n <= 15)
+	if (n > 15 || n < 0)
+		return;
+	while (x <= n)
 	{
-		for (i = 0; i <= n; ++i)
+		for (y = 0; y <= n; y++)
 		{
-			for (j = 0; j <= n; ++j)
+			z = x * y;
+			if (z > 99)
 			{
-				product = i * j;
-				if (j != 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-					if (product < 100)
-						_putchar(' ');
-					if (product < 10)
-						_putchar(' ');
-				}
-				if (product >= 100)
-				{
-					_putchar('0' + product / 100);
-					_putchar('0' + (product % 100) / 10);
-					_putchar('0' + (product % 10));
-				}
-				else if (product <= 9)
-				{
-					_putchar('0' + product);
-				}
-				else
-				{
-					_putchar('0' + product / 10);
-					_putchar('0' + product % 10);
-				}
+				_putchar(z / 100 + '0');
+				_putchar((z / 10 % 10) + '0');
+				_putchar(z % 10 + '0');
 			}
-			_putchar('\n');
+			else if (z > 9)
+			{
+				_putchar(' ');
+				_putchar(z / 10 + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (y != 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+			}
+			else
+				_putchar(z + '0');
+
+			if (y != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
+		_putchar('\n');
+		x++;
 	}
 }
