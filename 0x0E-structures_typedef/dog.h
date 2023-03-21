@@ -1,22 +1,30 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef _dog_h_
+#define _dog_h_
+
 /**
 *struct dog - dog credentials
-*
 *@name: name of dog
 *@age: age of dog
 *@owner: owner of dog
 *
 *Return: 0 success
 */
-struct dog
+
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
-/* Additional function prototypes */
+} dog_t;
+
 int _putchar(char c);
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
+
 void print_dog(struct dog *d);
-#endif
+
+dog_t *new_dog(char *name, float age, char *owner);
+
+void free_dog(dog_t *d);
+
+#endif /* _dog_h_ */
