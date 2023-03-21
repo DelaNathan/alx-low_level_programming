@@ -7,9 +7,9 @@
 *@age: age of dog
 *@owner: owner of dog
 *
-*return 0 success
+*Return: 0 success
 */
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
@@ -19,6 +19,4 @@ typedef struct dog
 int _putchar(char c);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
-dog_t *new_doq(char *name, float age, char *owner);
-void free_dog(dog_t *d);
 #endif
