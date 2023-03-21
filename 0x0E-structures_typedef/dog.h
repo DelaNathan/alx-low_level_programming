@@ -9,11 +9,11 @@
 *
 *return 0 success
 */
-struct dog
+typedef struct dog
 {
-char *name;
-float age;
-char *owner;
+	char *name;
+	float age;
+	char *owner;
 };
 /* Additional function prototypes */
 int _putchar(char c);
