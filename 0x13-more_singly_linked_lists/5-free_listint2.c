@@ -1,10 +1,8 @@
 #include "lists.h"
 
 /**
- * free_listint - a function that frees a linked list
+ * free_listint2 - a function that frees a linked list
  * @head: head node
- * @n: integer
- * Return: the head to NULL
  */
 
 void free_listint2(listint_t **head)
@@ -13,6 +11,6 @@ void free_listint2(listint_t **head)
 		return;
 
 	free_listint2(&(*head)->next);
-	free (*head);
+	free(*head);
 	*head = NULL;
 }
