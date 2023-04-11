@@ -4,7 +4,7 @@
 /**
  * creat_file - creates a file
  * @filename: points to name of file to create
- * @text_content: pointer to string to write to file
+ * @text_content: a pointer to string to write to file
  * Return: -1 if function fails
  */
 
