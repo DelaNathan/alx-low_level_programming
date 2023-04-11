@@ -5,7 +5,7 @@
  * get_bit - function that returns vales of bit at index
  * @n: long integer
  * @index: is index starting from 0 of bit
- * Reyurn: value of bit at index or -1 for an error
+ * Return: value of bit at index or -1 if an error occur
  */
 
 int get_bit(unsigned long int n, unsigned int index)
