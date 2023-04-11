@@ -9,30 +9,22 @@
  **/
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result = 0;
-	int len = strlen(b);
-	int index = len - 1;
-	int m = 0;
+	unsigned int result, m;
 
-	while (index >= 0)
+	m = 0;
+	result = 0;
+	if (!b)
+		return (0);
 
+	while (b[result] != '\0')
 
 	{
-		if (b[index] == '1')
-		{
-			result += pow(2, m);
-		}
-		m++;
-		index--;
+		if (b[result] != '0' && b[result] != '1')
+			return (0);
+		m <<= 1;
+		if (b[result] & 1)
+			m += 1;
+		result += 1;
 	}
-	return (result);
-}
-
-int main(void)
-{
-	char *binary = "1101101";
-	unsigned int d = binary_to_uint(binary);
-
-	printf("%d\n", d);
-	return (0);
+	return (m);
 }
